@@ -1,0 +1,14 @@
+<section>
+  <div class="container search-container flex">
+    <input type="text" [(ngModel)]="_filter" />
+    <button type="button" class="secondary-btn" (click)="filtertext()">
+      Search
+    </button>
+  </div>
+  <div class="container flex products-container">
+    <app-product-item
+      *ngFor="let product of productList"
+      [productItem]="product"
+    ></app-product-item>
+  </div>
+</section>

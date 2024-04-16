@@ -1,0 +1,59 @@
+<div class="cart-container container">
+  @if ((cartItems | keyvalue).length>0) {
+
+  <div class="card-details">
+    <table>
+      <tr>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Sub Total</th>
+        <th>Action</th>
+      </tr>
+      <tr *ngFor="let item of cartItems | keyvalue">
+        <td class="img-container">
+          <img [src]="item.value.imgUrl" [alt]="item.value.name" />
+        </td>
+        <td>{{ item.value.name }}</td>
+        <td>{{ item.value.price }}</td>
+        <td>
+          <app-product-quantity-operation [product]="item.value">
+          </app-product-quantity-operation>
+        </td>
+        <td>{{ item.value.price * item.value.qty | currency : "INR" }}</td>
+        <td class="actions">
+          <button
+            type="button"
+            class="primary-btn del-btn"
+            (click)="discardItemFromCart(item.value)"
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </table>
+
+    <h3 class="grand-total">
+      <span>Grand Total: </span>{{ totalCartValue | currency : "INR" }}
+    </h3>
+  </div>
+  } @else {
+  <div
+    class="empty-cart"
+    style="
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      height: 60vh;
+      gap: 20px;
+      justify-content: center;
+    "
+  >
+    <h4>Looks like your cart is empty !!</h4>
+    <a href="#" class="secondary-btn" routerLink="/shopping"
+      >Continue Shopping</a
+    >
+  </div>
+  }
+</div>

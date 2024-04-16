@@ -1,0 +1,18 @@
+
+
+.increment, .decrement {
+    padding: 2px;
+    width: 20px;
+    background-color: var(--accent-color-dark);
+    border-radius: 30%;
+    color: #fff;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1rem;
+    border: none;
+}
+
+.quantity {
+    margin: 0 4px 0 0;
+    text-align: center;
+}

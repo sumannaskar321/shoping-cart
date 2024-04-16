@@ -1,0 +1,53 @@
+.cart-details {
+    padding-block:20px;
+}
+
+.grand-total {
+    margin-block: 20px;
+    text-align: end;
+}
+
+.grand-total > span {
+    color: var(--accent-color);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 5px;
+    word-wrap: break-word;
+}
+
+
+
+.del-btn {
+    background-color: tomato;
+    transition: 0.2s ease-out;
+}
+
+.del-btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0 5px var(--accent-color-dark);
+}
+
+.actions {
+    text-align: center;
+}
+
+.img-container {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-container img {
+    max-width: 200px;
+    max-height: 200px;
+}

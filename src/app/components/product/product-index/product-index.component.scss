@@ -1,0 +1,24 @@
+.products-container{
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+    background-color: #f6f4f4;
+    padding: 20px 0 20px 0;
+}
+
+.search-container{
+    margin-block: 10px;
+    padding-block: 10px;
+    justify-content: center;
+}
+
+.search-container> input {
+    width: calc(100% - 30%);
+    padding: 7px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border: 2px solid black;
+    border-radius: 5px;
+
+}

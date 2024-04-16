@@ -1,0 +1,17 @@
+<div class="product-card flex">
+  <div class="img-container">
+    <img src="{{ productItem.imgUrl }}" alt="{{ productItem.name }}" />
+  </div>
+
+  <h4 class="p-name">{{ productItem.name }}</h4>
+  <p class="p-desc">{{ productItem.description }}</p>
+
+  <p>
+    <app-product-quantity-operation [product]="productItem">
+    </app-product-quantity-operation>
+    <strong class="price">{{ productItem.price | currency : "INR" }}</strong>
+  </p>
+  <button type="button" class="primary-btn add-cart-btn" (click)="addToCart()">
+    Add to Cart
+  </button>
+</div>
